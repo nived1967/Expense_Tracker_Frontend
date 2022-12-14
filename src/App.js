@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import {Routes,Route} from 'react-router-dom';
+import {Register} from './routes/registration/registration.component.jsx';
+import {Login} from './routes/login/login.component.jsx';
 import './App.css';
+import {Home} from './routes/home/home.component.jsx';
+import {ExpenseType} from './components/expense_type/expense_type.component.jsx'
+import {Navigation} from './routes/navigation/navigation.component.jsx';
+import {Income} from './components/income/income.component.jsx';
 
-function App() {
+const App = () =>  {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+    <Route path='/' element={<Register/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/nav' element={<Navigation/>}>
+      <Route path='/nav/home' element={<Home/>}/>
+      <Route path='/nav/expense_type' element={<ExpenseType/>}/>
+      <Route path='/nav/income' element={<Income/>}/>
+    </Route>
+    </Routes>
   );
 }
 
