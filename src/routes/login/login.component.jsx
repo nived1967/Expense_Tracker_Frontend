@@ -13,11 +13,14 @@ function Login() {
       user_name:username,
       user_password:password,
     }).then((response)=>{
-      console.log(response);
+      console.log(response.data[0].user_id);
       if(response.data.length===0)
       alert("Wrong username/password combination");
       else
+      {
+        localStorage.setItem("user_id",response.data[0].user_id);
         navigate('/nav/home');
+      }
     })
   };
 
