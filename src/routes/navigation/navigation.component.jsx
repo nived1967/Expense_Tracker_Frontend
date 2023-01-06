@@ -11,8 +11,14 @@ const Navigation = () =>
             <Link className="nav-link" to='/nav/home'>
             Home
             </Link>
+            <Link className="nav-link" to='/nav/expense'>
+            Expense
+            </Link>
             <Link className="nav-link" to='/nav/expense_type'>
             Expense Type
+            </Link>
+            <Link className="nav-link" to='/nav/expected_expense'>
+            Expected Expense
             </Link>
             <Link className="nav-link" to='/nav/income'>
             Income

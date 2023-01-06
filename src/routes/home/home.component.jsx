@@ -55,7 +55,7 @@ const Home = () => {
 
   const totalExpense=expense.reduce((a,v)=>a=a+Number(v.expense_amount),0);
   const totalIncome=income.reduce((a,v)=>a=a+Number(v.income_amount),0);
-  const totalExpectedExpense=expectedExpense.reduce((a,v)=>a=a+Number(v.expected_expense_amount),0);
+  const totalExpectedExpense=expectedExpense.reduce((a,v)=>a=a+Number(v.expected_amount),0);
 
   return (
     // console.log(data),
